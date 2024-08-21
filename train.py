@@ -37,8 +37,8 @@ def str2bool(v):
 class get_al_hyperparams():
     def __init__(self, dataset_name='voc'):
         self.dataset_name = dataset_name
-        self.dataset_path = {'voc': '/content/AL-SSL/data/VOC0712',
-                             'coco': '/content/AL-SSL/data/coco'}
+        self.dataset_path = {'voc': '/kaggle/working/AL-SSL/data/VOC0712',
+                             'coco': '/kaggle/working/AL-SSL/data/coco'}
 
         self.num_ims = {'voc': 16551, 'coco': 82081}
         self.num_init = {'voc': 2011, 'coco': 5000}
@@ -318,7 +318,7 @@ def train(dataset, data_loader, cfg, labeled_set, supervised_dataset, indices):
 
             if iteration != 0 and (iteration + 1) % 15 == 0:
                 print('Saving state, iter:', iteration)
-                net_name = '/content/al_ssl/weights' + repr(iteration + 1) + args.criterion_select + '_id_' + str(args.id)  + \
+                net_name = '//kaggle/working/al_ssl/weights' + repr(iteration + 1) + args.criterion_select + '_id_' + str(args.id)  + \
                            '_pl_threshold_' + str(args.pseudo_threshold) + '_labeled_set_' + str(len(labeled_set)) + '_.pth'
                 print(net_name)
                 torch.save(net.state_dict(), net_name)
