@@ -16,7 +16,7 @@ import torchvision.transforms as transforms
 # https://github.com/NVlabs/AL-SSL/
 
 
-COCO_ROOT = '/content/AL-SSL/data/coco'
+COCO_ROOT = '/kaggle/working/AL-SSL/data/coco'
 IMAGES = 'images'
 ANNOTATIONS = 'annotations'
 COCO_API = 'PythonAPI'
